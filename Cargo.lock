@@ -215,10 +215,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "blurmac"
-version = "0.0.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
+version = "0.1.0"
+source = "git+https://github.com/servo/devices#1069d67cbacb28b77a3d5dd7f211171c05f32c62"
 dependencies = [
- "log 0.3.8 (registry+https://github.com/rust-lang/crates.io-index)",
+ "log 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "objc 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -673,10 +673,10 @@ dependencies = [
 [[package]]
 name = "device"
 version = "0.0.1"
-source = "git+https://github.com/servo/devices#c3b012b0ac4fbc47d1ebc9bd3fc308f599be4ee4"
+source = "git+https://github.com/servo/devices#1069d67cbacb28b77a3d5dd7f211171c05f32c62"
 dependencies = [
  "blurdroid 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "blurmac 0.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "blurmac 0.1.0 (git+https://github.com/servo/devices)",
  "blurmock 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "blurz 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -1539,6 +1539,14 @@ dependencies = [
 name = "log"
 version = "0.3.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "log"
+version = "0.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "cfg-if 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
+]
 
 [[package]]
 name = "lzw"
@@ -3567,7 +3575,7 @@ dependencies = [
 "checksum bitreader 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "80b13e2ab064ff3aa0bdbf1eff533f9822dc37899821f5f98c67f263eab51707"
 "checksum block 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)" = "0d8c1fef690941d3e7788d328517591fecc684c084084702d6ff1641e993699a"
 "checksum blurdroid 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)" = "d7daba519d29beebfc7d302795af88a16b43f431b9b268586926ac61cc655a68"
-"checksum blurmac 0.0.1 (registry+https://github.com/rust-lang/crates.io-index)" = "72af3718b3f652fb2026bf9d9dd5f92332cd287884283c343f03fff16cbb0172"
+"checksum blurmac 0.1.0 (git+https://github.com/servo/devices)" = "<none>"
 "checksum blurmock 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "68dd72da3a3bb40f3d3bdd366c4cf8e2b1d208c366304f382c80cef8126ca8da"
 "checksum blurz 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = "e73bda0f4c71c63a047351070097f3f507e6718e86b9ee525173371ef7b94b73"
 "checksum brotli 1.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "fe87b40996b84fdc56e57c165d93079f4b50cb806598118e692ddfaa3d3c57c0"
@@ -3674,6 +3682,7 @@ dependencies = [
 "checksum libloading 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "be99f814beb3e9503a786a592c909692bb6d4fc5a695f6ed7987223acfbd5194"
 "checksum libz-sys 1.0.18 (registry+https://github.com/rust-lang/crates.io-index)" = "87f737ad6cc6fd6eefe3d9dc5412f1573865bded441300904d2f42269e140f16"
 "checksum log 0.3.8 (registry+https://github.com/rust-lang/crates.io-index)" = "880f77541efa6e5cc74e76910c9884d9859683118839d6a1dc3b11e63512565b"
+"checksum log 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)" = "89f010e843f2b1a31dbd316b3b8d443758bc634bed37aabade59c686d644e0a2"
 "checksum lzw 0.10.0 (registry+https://github.com/rust-lang/crates.io-index)" = "7d947cbb889ed21c2a84be6ffbaebf5b4e0f4340638cba0444907e38b56be084"
 "checksum mac 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "c41e0c4fef86961ac6d6f8a82609f55f31b05e4fce149ac5710e439df7619ba4"
 "checksum malloc_buf 0.0.6 (registry+https://github.com/rust-lang/crates.io-index)" = "62bb907fe88d54d8d9ce32a3cceab4218ed2f6b7d35617cafe9adf84e43919cb"
