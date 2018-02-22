@@ -211,7 +211,6 @@ pub mod types {
     #[cfg(target_env = "msvc")]
     include!(concat!(env!("OUT_DIR"), "/build/InterfaceTypes.rs"));
 }
-
 pub mod abstractworker;
 pub mod abstractworkerglobalscope;
 pub mod activation;
@@ -265,6 +264,7 @@ pub mod dissimilaroriginwindow;
 pub mod document;
 pub mod documentfragment;
 pub mod documenttype;
+pub mod doge;
 pub mod domexception;
 pub mod domimplementation;
 pub mod dommatrix;
