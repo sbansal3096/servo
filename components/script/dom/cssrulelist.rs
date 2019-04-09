@@ -119,6 +119,10 @@ impl CSSRuleList {
                 &parent_stylesheet.contents,
                 index,
                 nested,
+<<<<<<< HEAD
+=======
+                // 3.
+>>>>>>> 0ffee18b6fc7420df76652f38ac34ba9cf1f8157
                 loader.as_ref().map(|l| l as &StyleStylesheetLoader),
             )
         })?;
