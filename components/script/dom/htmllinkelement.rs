@@ -105,6 +105,12 @@ impl HTMLLinkElement {
         self.request_generation_id.get()
     }
 
+    pub fn stylesheet_owner_cleanup(&self) {
+        if let Some(cssom_stylesheet) = self.cssom_stylesheet.get() {
+            cssom_stylesheet.set_owner(None);
+        }
+    }
+
     // FIXME(emilio): These methods are duplicated with
     // HTMLStyleElement::set_stylesheet.
     pub fn set_stylesheet(&self, s: Arc<Stylesheet>) {
@@ -113,6 +119,13 @@ impl HTMLLinkElement {
             doc.remove_stylesheet(self.upcast(), s)
         }
         *self.stylesheet.borrow_mut() = Some(s.clone());
+<<<<<<< HEAD
+        self.stylesheet_owner_cleanup();
+=======
+        if let Some(cssom_stylesheet) = self.cssom_stylesheet.get() {
+            cssom_stylesheet.set_owner(None);
+        }
+>>>>>>> 0ffee18b6fc7420df76652f38ac34ba9cf1f8157
         self.cssom_stylesheet.set(None);
         doc.add_stylesheet(self.upcast(), s);
     }
@@ -250,8 +263,14 @@ impl VirtualMethods for HTMLLinkElement {
         if let Some(ref s) = self.super_type() {
             s.unbind_from_tree(context);
         }
-
         if let Some(s) = self.stylesheet.borrow_mut().take() {
+<<<<<<< HEAD
+            self.stylesheet_owner_cleanup();
+=======
+            if let Some(cssom_stylesheet) = self.cssom_stylesheet.get() {
+                cssom_stylesheet.set_owner(None);
+            }
+>>>>>>> 0ffee18b6fc7420df76652f38ac34ba9cf1f8157
             document_from_node(self).remove_stylesheet(self.upcast(), &s);
         }
     }
